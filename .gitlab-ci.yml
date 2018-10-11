@@ -7,4 +7,4 @@ smoke-test:
   script:
     - echo "smoke testing..."
   tags:
-    - macos-local 
+    - DS 
