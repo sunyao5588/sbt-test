@@ -6,8 +6,5 @@ smoke-test:
   image: sunyao5588/sbt:v0.2
   script:
     - echo "smoke testing..."
-    - sbt test 
   tags:
-    - DS
-    - bitsearch
-    - google-vm
+    - macos-local 
