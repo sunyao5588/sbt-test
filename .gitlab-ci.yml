@@ -1,31 +1,13 @@
 stages:
-  - build
   - test
-
-compile:
-  stage: build
-  script: 
-    - echo "compiling source codes..."
-  tags:
-    - DS
-    - bitsearch
-    - macos
-
-package:
-  stage: build
-  script:
-    - echo "packaging..."
-  tags:
-    - DS
-    - bitsearch
-    - macos
 
 smoke-test:
   stage: test
-  script: 
+  image: sunyao5588/sbt:v0.2
+  script:
     - echo "smoke testing..."
-    - sbt run 
+    - sbt test 
   tags:
     - DS
     - bitsearch
-    - macos
+    - google-vm
