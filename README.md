@@ -4,9 +4,11 @@
 > GitLab has integrated CI/CD pipelines to build, test, deploy, and monitor your code.
                 
 One of the available gitlab-runners will be captured to run CI script(compile/package/test/deploy). These gitlab-runners are placed on separate users, servers, containers and even on your local machine.
-
+Work for different branches:       
 <img src="ci-branch.png" alt="drawing" style="width:400px;"/>
+CI processing:            
 <img src="ci.png" alt="drawing" style="width:400px;"/>
+CI passed:         
 <img src="ci-pass.png" alt="drawing" style="width:400px;"/>
 
 These are two kinds of gitlab runner. One is Shared Runners which are free to use for public open source projects and limited to 2000 CI minutes per month per group for private project on [gitlab.com](https://gitlab.com) and another one is Specific Runners which are specific for group projects.
