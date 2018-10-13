@@ -5,19 +5,19 @@
                 
 One of the available gitlab-runners will be captured to run CI script(compile/package/test/deploy). These gitlab-runners are placed on separate users, servers, containers and even on your local machine.
 Work for different branches:       
-<img src="ci-branch.png" alt="drawing" style="width:300px;"/>
+<img src="./image/ci-branch.png" alt="drawing" style="width:300px;"/>
 CI processing:            
-<img src="ci.png" alt="drawing" style="width:300px;"/>
+<img src="./image/ci.png" alt="drawing" style="width:300px;"/>
 CI passed:         
-<img src="ci-pass.png" alt="drawing" style="width:300px;"/>
+<img src="./image/ci-pass.png" alt="drawing" style="width:300px;"/>
 
 These are two kinds of gitlab runner. One is Shared Runners which are free to use for public open source projects and limited to 2000 CI minutes per month per group for private project on [gitlab.com](https://gitlab.com) and another one is Specific Runners which are specific for group projects.
 
 Two kinds of gitlab runners:   
-<img src="2-runners.png" alt="drawing" style="width:300px;"/>
+<img src="./image/2-runners.png" alt="drawing" style="width:300px;"/>
 
 Specific Runner for bitsearch project:
-<img src="runners.png" alt="drawing" style="width:300px;"/>
+<img src="./image/runners.png" alt="drawing" style="width:300px;"/>
 
 .gitlab-ci.yml文件:
 ```yaml
@@ -36,14 +36,14 @@ smoke-test:
     - google-vm
 ```
 
-## Runner execurator (docker) <img src="docker.png" alt="drawing" style="width:30px;"/>
-In bitsearch project we use docker image to set up sbt build environment and use local host directory to store project required liberies in order to save time from downloading libs everytime while building.
+## Runner execurator (docker)     
+In bitsearch project we use docker image to set up sbt build environment and use local host directory to store project required liberies in order to save time from downloading libs everytime while building. <img src="./image/docker.png" alt="drawing" style="width:15px;"/>    
 
 ## trigger jenkins project
 Setup Integrations(webhooks) in gitlab.com (push events).
 
 jenkins project has also be set up to be triggered after "git push" to gitlab repository.    
-<img src="jenkins-trigger.png" alt="drawing" style="width:300px;"/>
+<img src="./image/jenkins-trigger.png" alt="drawing" style="width:300px;"/>
 
 
 Conclusion: 
