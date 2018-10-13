@@ -4,21 +4,33 @@
 > GitLab has integrated CI/CD pipelines to build, test, deploy, and monitor your code.
                 
 One of the available gitlab-runners will be captured to run CI script(compile/package/test/deploy). These gitlab-runners are placed on separate users, servers, containers and even on your local machine.
+<img src="ci-branch.png" alt="drawing" style="width:450px;"/>
+<img src="ci.png" alt="drawing" style="width:450px;"/>
+<img src="ci-pass.png" alt="drawing" style="width:450px;"/>
 
 These are two kinds of gitlab runner. One is Shared Runners which are free to use for public open source projects and limited to 2000 CI minutes per month per group for private project on [gitlab.com](https://gitlab.com) and another one is Specific Runners which are specific for group projects.
+<img src="2-runners.png" alt="drawing" style="width:450px;"/>
 
-![Alt text](/Users/sunyao/workspace/pwc-workspace/Other/used/runners.png)
+Specific Runner for bitsearch project:
+<img src="runners.png" alt="drawing" style="width:450px;"/>
 
+.gitlab-ci.yml文件
+```bash
+stages:
+  - test
 
-
+smoke-test:
+  stage: test
+  image: sunyao5588/sbt:v0.2
+  script:
+    - echo "stage test smoke testing..."
+    - sbt "test:testOnly *JsonModelSpec"
+  tags:
+    - DS
+    - bitsearch
+    - google-vm
 ```
-sbt compile test 
-```
-or 
 
-```
-sbt "test:testOnly *JsonModelSpec"
-```
 
 ## test gitlab ci process
 > use .gitlab-ci.yml in project and it triggers CI process every time while someone push to repository
