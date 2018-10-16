@@ -1,7 +1,7 @@
 # How to use CI to fasten your project?
 ## what happened after "git push" ?
 
-> GitLab has integrated CI/CD pipelines to build, test, deploy, and monitor your code.
+> GitLab has integrated CI/CD pipelines to build, test, deploy, and monitor your code!
                 
 One of the available gitlab-runners will be captured to run CI script(compile/package/test/deploy). These gitlab-runners are placed on separate users, servers, containers and even on your local machine.
 Work for different branches:       
