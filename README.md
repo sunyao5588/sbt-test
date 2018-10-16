@@ -50,4 +50,5 @@ Conclusion:
 1. After "git push", compile/package/test/deploy are automatically triggered based on .gitlab-ci.yml.
 2. Available runners will be used to run CI process.
 3. Jenkins project can also be used to run CI script instead of gitlab Runners.
+4. Github integration with Jenkins.
 
